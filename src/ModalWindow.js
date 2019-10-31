@@ -1,27 +1,24 @@
-import React, {Fragment,useState} from 'react';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import { Button ,Modal} from 'react-bootstrap';
+import React, {Component,useState} from 'react';
+import PropTypes from 'prop-types';
+import ReactDOM from 'react-dom'
+import Modal from './Modal';
 
 
-export const Example = () => {
-    return (
-        <Fragment>
+export  const ModalWindow = () => {
+    const [ isToggleOn, setIsToogleOn] = useState(false);
+    
+    const handleClick= () => {setIsToogleOn(!isToggleOn)}
+    
+        return (
+            <div>
+                            {isToggleOn &&
+                                <Modal onClose={handleClick}>
+                                    
+                                        </Modal>
+                            }
+            </div>
+        );
+    
+}
+ReactDOM.render(<ModalWindow />, document.getElementById('modal-root'));
 
-<div className="static-modal">
-  <Modal.Dialog>
-    <Modal.Header>
-      <Modal.Title>Modal title</Modal.Title>
-    </Modal.Header>
-
-    <Modal.Body>One fine body...</Modal.Body>
-
-    <Modal.Footer>
-      <Button>Close</Button>
-      <Button bsStyle="primary">Save changes</Button>
-    </Modal.Footer>
-  </Modal.Dialog>
-</div>;
-        </Fragment>
- 
-    );
-    }

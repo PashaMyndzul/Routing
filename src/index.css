@@ -66,7 +66,7 @@ li a:hover {
   z-index: 100;
 }
 
-.modal .modal__close-button {
+.modal .modal__button {
   position: absolute;
   top: 65%;
   right: 50%;
@@ -75,4 +75,8 @@ li a:hover {
   font-size: 1.5em;
   padding: 5px;
   margin: 5px;
+}
+.reviews {
+  padding: 50px;
+  
 }

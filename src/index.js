@@ -6,6 +6,7 @@ import * as serviceWorker from './serviceWorker';
 import { Header } from './Header';
 import { routes } from './routes';
 import {ShopPage} from './ShopPage';
+import {Apps} from './Apps';
 
 const App = () => (
     <BrowserRouter>
@@ -13,7 +14,7 @@ const App = () => (
         <Switch>
           <Route exact path={routes.HOME} render={ () => <h2>Welcome to Home</h2> } />
           <Route path={routes.SHOP} component={ ShopPage } />
-          <Route path={routes.REVIEWS} render={ () => <h2>Reviews</h2> } />
+          <Route path={routes.REVIEWS} component={ Apps } />
         </Switch>
     
     </BrowserRouter>

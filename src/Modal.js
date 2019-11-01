@@ -1,28 +1,20 @@
-import React, {useRouteMatch, Link, Route} from 'react';
+import React, { Fragment } from 'react';
 import ReactDOM from 'react-dom';
-import { routes } from './routes';
+
 
 import './index.css';
 
 
-export default class Modal extends React.Component {
+const Modal = ({ isShowing, hide }) => isShowing ? ReactDOM.createPortal(
+   
+  <Fragment>
     
-    componentWillMount() {
-        this.root = document.createElement('div');
-        document.body.appendChild(this.root);
-    }
-
-    componentWillUnmount() {
-        document.body.removeChild(this.root);
-    }
-
-    render() {
-        return ReactDOM.createPortal(
             <div className="modal">
-                <button className="modal__close-button"  >OK</button>
-                {this.props.children}
+                <button className="modal__button" onClick={hide}  >OK</button>
+                <h1>There is no products now </h1>
             </div>,
-            this.root
-        );
-    }
-}
+  </Fragment>, document.body
+) : null;
+
+export default Modal;
+

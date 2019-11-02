@@ -76,7 +76,14 @@ li a:hover {
   padding: 5px;
   margin: 5px;
 }
-.reviews {
-  padding: 50px;
-  
+.form {
+  display: inline;
+  padding: 10px;
+}
+.todos {
+  display: flex;
+  flex-direction: column;
+  padding-left: 20px;
+  padding-top: 10px;
+  cursor: pointer;
 }

@@ -5,16 +5,16 @@ import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import * as serviceWorker from './serviceWorker';
 import { Header } from './Header';
 import { routes } from './routes';
-import {ShopPage} from './ShopPage';
-import {Apps} from './Apps';
+import { ShopPage } from './ShopPage';
+import { Reviews } from './Reviews';
 
 const App = () => (
     <BrowserRouter>
         <Header />
         <Switch>
-          <Route exact path={routes.HOME} render={ () => <h2>Welcome to Home</h2> } />
-          <Route path={routes.SHOP} component={ ShopPage } />
-          <Route path={routes.REVIEWS} component={ Apps } />
+          <Route exact path={ routes.HOME} render={ () => <h2>Welcome to Home</h2> } />
+          <Route path={ routes.SHOP } component={ ShopPage } />
+          <Route path={ routes.REVIEWS } component={ Reviews } />
         </Switch>
     
     </BrowserRouter>

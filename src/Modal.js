@@ -10,7 +10,7 @@ const Modal = ({ isShowing, hide }) => isShowing ? ReactDOM.createPortal(
   <Fragment>
     
             <div className="modal">
-                <button className="modal__button" onClick={hide}  >OK</button>
+                <button className="modal__button" onClick={hide}>OK</button>
                 <h1>There is no products now </h1>
             </div>,
   </Fragment>, document.body
